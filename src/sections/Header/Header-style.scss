@@ -24,13 +24,13 @@
                 line-height: 50px;
                 color: $text-color-light;
                 font-family: $text-font-2;
-                cursor: pointer;
                 @include drop-shadow;
                 position: relative;
 
                 .underlineItem {
                     position: relative;
                     display: inline-block;
+                    cursor: pointer;
 
                     &::after {
                         content: '';
