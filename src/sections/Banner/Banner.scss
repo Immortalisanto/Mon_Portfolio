@@ -45,12 +45,9 @@
 
     &__contactButton {
         @include button;
-        @include border-radius;
-        @include box-shadow;
-        background-color: $background-color-5;
-        color: $text-color-light;
-        border: 0;
-        cursor: pointer;
-        font-family: $text-font-2;
+
+        .contactMe {
+            @include drop-shadow;
+        }
     }
 }

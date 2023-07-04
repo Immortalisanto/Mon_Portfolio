@@ -18,7 +18,9 @@ export default function Banner() {
                     </h1>
                 </div>
 
-                <button className="banner__contactButton">Me contacter</button>
+                <button className="banner__contactButton">
+                    <span className="contactMe">Me contacter</span>
+                </button>
             </div>
         </section>
     )

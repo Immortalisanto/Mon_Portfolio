@@ -4,15 +4,6 @@
 $text-font-1: 'Pacifico', serif;
 $text-font-2: 'Roboto', sans-serif;
 
-// Shadow variables
-@mixin drop-shadow {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-@mixin box-shadow {
-    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.25);
-}
-
 // Colors variables
 $background-color-1: #f1f1d3;
 $background-color-2: #e3ebd0;
@@ -21,6 +12,46 @@ $background-color-4: #9fcda8;
 $background-color-5: #7dc2a5;
 $text-color-light: #ffffff;
 $text-color-dark: #000000;
+
+// Font size variables
+@mixin font-size-title1 {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+@mixin font-size-title2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+@mixin font-size-title3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+@mixin font-size-body {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@mixin font-size-body-medium {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+@mixin font-size-body-highlight {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+// Shadow variables
+@mixin drop-shadow {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@mixin box-shadow {
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.25);
+}
 
 // Others variables
 @mixin border-radius {
