@@ -6,8 +6,10 @@
 
     .nav {
         .navList {
+            max-width: 1360px;
             height: 80px;
-            margin: 0;
+            margin: auto;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
