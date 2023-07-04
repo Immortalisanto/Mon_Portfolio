@@ -1,0 +1,56 @@
+@import '../../assets/variables.scss';
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    align-items: center;
+
+    &__image {
+        object-fit: cover;
+        height: 500px;
+    }
+
+    .welcomeTextAndContactButtonContainer {
+        position: absolute;
+        top: 190px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 350px;
+        justify-content: space-between;
+    }
+
+    &__welcomeText {
+        height: 250px;
+        width: 600px;
+        background-color: rgba(black, 0.5);
+        @include border-radius;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--title {
+            height: 165px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: $text-color-light;
+            font-family: $text-font-1;
+            font-size: 36px;
+            font-weight: 400;
+        }
+    }
+
+    &__contactButton {
+        @include button;
+        @include border-radius;
+        @include box-shadow;
+        background-color: $background-color-5;
+        color: $text-color-light;
+        border: 0;
+        cursor: pointer;
+        font-family: $text-font-2;
+    }
+}
