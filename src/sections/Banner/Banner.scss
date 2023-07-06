@@ -42,12 +42,4 @@
             font-weight: 400;
         }
     }
-
-    &__contactButton {
-        @include button;
-
-        .contactMe {
-            @include drop-shadow;
-        }
-    }
 }

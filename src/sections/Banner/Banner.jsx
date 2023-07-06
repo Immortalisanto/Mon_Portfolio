@@ -1,5 +1,6 @@
 import './Banner.scss'
 import bannerDesktop from '../../assets/images/banner-desktop.jpg'
+import Button from '../../components/Button/Button.jsx'
 
 export default function Banner() {
     return (
@@ -18,9 +19,7 @@ export default function Banner() {
                     </h1>
                 </div>
 
-                <button className="banner__contactButton">
-                    <span className="contactMe">Me contacter</span>
-                </button>
+                <Button text="Me contacter" />
             </div>
         </section>
     )

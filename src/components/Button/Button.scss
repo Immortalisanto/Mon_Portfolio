@@ -1,0 +1,18 @@
+@import '../../assets/variables.scss';
+
+.button {
+    @include border-radius;
+    @include box-shadow;
+    width: 300px;
+    height: 60px;
+    background-color: $background-color-5;
+    color: $text-color-light;
+    border: 0;
+    cursor: pointer;
+    font-family: $text-font-2;
+    font-size: 20px;
+
+    &__text {
+        @include drop-shadow;
+    }
+}
