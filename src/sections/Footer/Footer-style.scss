@@ -43,8 +43,13 @@
             .linksLegalInformations {
                 color: $text-color-light;
                 font-family: $text-font-2;
+                text-decoration: none;
                 @include drop-shadow;
                 @include font-size-body;
+
+                .underlineItem {
+                    @include underline;
+                }
             }
         }
     }

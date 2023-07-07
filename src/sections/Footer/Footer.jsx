@@ -28,14 +28,16 @@ export default function Footer() {
                     <a
                         href="#"
                         className="linksLegalInformations">
-                        Politique de confidentialité
+                        <span className="underlineItem">
+                            Politique de confidentialité
+                        </span>
                     </a>
                 </p>
                 <p className="footer__legalInformations--legalNotice legalInformation">
                     <a
                         href="#"
                         className="linksLegalInformations">
-                        Mentions légales
+                        <span className="underlineItem">Mentions légales</span>
                     </a>
                 </p>
             </div>
