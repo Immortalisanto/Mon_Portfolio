@@ -1,14 +1,14 @@
 import './Banner.scss'
-import bannerDesktop from '../../assets/images/banner-desktop.jpg'
+import bannerDesktopParallax from '../../assets/images/banner-desktop-xl.jpg'
 import Button from '../../components/Button/Button.jsx'
+import { ParallaxBanner } from 'react-scroll-parallax'
 
 export default function Banner() {
     return (
         <section className="banner">
-            <img
-                src={bannerDesktop}
-                alt="Représente un ordinateur portable affichant des lignes de code à l'écran. Cet ordinateur est posé sur un bureau décoré de diverses plantes."
-                className="banner__image"
+            <ParallaxBanner
+                layers={[{ image: bannerDesktopParallax, speed: -20 }]}
+                className="banner__parallaxBanner"
             />
             <div className="welcomeTextAndContactButtonContainer">
                 <div className="banner__welcomeText">

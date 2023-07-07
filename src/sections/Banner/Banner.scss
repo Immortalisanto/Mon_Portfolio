@@ -6,9 +6,9 @@
     height: 500px;
     align-items: center;
 
-    &__image {
-        object-fit: cover;
-        height: 500px;
+    &__parallaxBanner {
+        aspect-ratio: 2 / 1;
+        z-index: -1;
     }
 
     .welcomeTextAndContactButtonContainer {
