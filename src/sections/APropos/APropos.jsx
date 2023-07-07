@@ -1,4 +1,6 @@
 import './APropos.scss'
+import { AProposData } from '../../data/AProposData'
+import InformationBox from '../../components/InformationBox/InformationBox'
 
 export default function APropos() {
     return (
@@ -48,7 +50,23 @@ export default function APropos() {
                     des résultats de qualité.
                 </p>
             </div>
-            <div className="aPropos__boxes"></div>
+            <div className="aPropos__boxes">
+                {AProposData.map(({ index, title, description }) => (
+                    <InformationBox
+                        key={`${title}-${index}`}
+                        title={title}
+                        description={description.map((paragraph, index) => (
+                            <p
+                                key={`${index}-${paragraph
+                                    .slice(0, 10)
+                                    .replaceAll(' ', '&')}`}
+                                className="informationBox__description__paragraph">
+                                {paragraph}
+                            </p>
+                        ))}
+                    />
+                ))}
+            </div>
         </section>
     )
 }

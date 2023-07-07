@@ -17,7 +17,6 @@
     }
 
     &__text {
-        border: 1px red solid;
         max-width: 1200px;
         min-height: 355px;
         margin: 24px auto 34px auto;
@@ -31,5 +30,12 @@
         &--highlight {
             @include font-size-body-highlight;
         }
+    }
+
+    &__boxes {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
     }
 }

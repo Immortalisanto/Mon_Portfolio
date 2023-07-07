@@ -1,0 +1,40 @@
+@import '../../assets/variables.scss';
+
+.informationBox {
+    width: 340px;
+    height: 340px;
+    @include box-shadow;
+    @include border-radius;
+    background-color: $background-color-5;
+
+    &__title {
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin: 10px auto 15px auto;
+        font-family: $text-font-1;
+        @include font-size-title3;
+        @include drop-shadow;
+        color: $text-color-light;
+    }
+
+    &__description {
+        width: 300px;
+        height: 250px;
+        margin: auto;
+        padding: 0px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        font-family: $text-font-2;
+        color: $text-color-light;
+        @include font-size-body;
+        @include drop-shadow;
+
+        &__paragraph {
+            margin: 0;
+        }
+    }
+}
