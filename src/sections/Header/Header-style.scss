@@ -32,6 +32,11 @@
 
                 .underlineItem {
                     @include underline;
+
+                    &__link {
+                        color: $text-color-light;
+                        text-decoration: none;
+                    }
                 }
 
                 &--avatar {

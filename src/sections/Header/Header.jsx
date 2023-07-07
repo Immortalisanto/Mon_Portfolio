@@ -10,7 +10,13 @@ export default function Header() {
                         <span className="underlineItem">Accueil</span>
                     </li>
                     <li className="navList__listItem">
-                        <span className="underlineItem">A propos</span>
+                        <span className="underlineItem">
+                            <a
+                                href="#aProposAnchor"
+                                className="underlineItem__link">
+                                A propos
+                            </a>
+                        </span>
                     </li>
                     <li className="navList__listItem">
                         <span className="underlineItem">Compétences</span>

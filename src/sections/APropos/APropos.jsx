@@ -4,7 +4,9 @@ import InformationBox from '../../components/InformationBox/InformationBox'
 
 export default function APropos() {
     return (
-        <section className="aPropos">
+        <section
+            className="aPropos"
+            id="aProposAnchor">
             <h2 className="aPropos__title">A propos de moi</h2>
             <div className="aPropos__text">
                 <p>
