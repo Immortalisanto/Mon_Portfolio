@@ -32,7 +32,13 @@ export default function Header() {
                         <span className="underlineItem">Portfolio</span>
                     </li>
                     <li className="navList__listItem">
-                        <span className="underlineItem">Services</span>
+                        <span className="underlineItem">
+                            <a
+                                href="#servicesAnchor"
+                                className="underlineItem__link">
+                                Services
+                            </a>
+                        </span>
                     </li>
                     <li className="navList__listItem">
                         <span className="underlineItem">Contact</span>

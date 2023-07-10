@@ -3,6 +3,7 @@ import Footer from './sections/Footer/Footer'
 import React from 'react'
 import Banner from './sections/Banner/Banner'
 import APropos from './sections/APropos/APropos'
+import Services from './sections/Services/Services'
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <main>
                 <Banner />
                 <APropos />
+                <Services />
             </main>
             <Footer />
         </React.Fragment>
