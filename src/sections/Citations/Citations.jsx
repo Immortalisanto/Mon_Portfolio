@@ -1,14 +1,18 @@
 import './Citations.scss'
 import { CitationsData } from '../../data/CitationsData'
-// import { useState } from 'react'
+import { useState } from 'react'
 
 export default function Citations() {
-    // const [current, setCurrent] = useState(0)
+    const [current, setCurrent] = useState(0)
     const length = CitationsData.length
+
+    const handleClick = (index) => {
+        setCurrent(index)
+    }
 
     return (
         <section className="citations">
-            {/* {CitationsData.map(({ quote, author, index }) => {
+            {CitationsData.map(({ quote, author, index }) => {
                 return (
                     <div
                         className="citations__slide"
@@ -27,12 +31,17 @@ export default function Citations() {
                         )}
                     </div>
                 )
-            })} */}
+            })}
             <div className="roundPositionIndicatorBlock">
                 {[...Array(length)].map((e, index) => (
                     <div
-                        className="roundPositionIndicatorBlock__round"
-                        key={index}></div>
+                        className={
+                            current === index
+                                ? 'currentPosition roundPositionIndicatorBlock__round'
+                                : 'roundPositionIndicatorBlock__round'
+                        }
+                        key={index}
+                        onClick={() => handleClick(index)}></div>
                 ))}
             </div>
         </section>
