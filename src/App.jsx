@@ -4,6 +4,7 @@ import React from 'react'
 import Banner from './sections/Banner/Banner'
 import APropos from './sections/APropos/APropos'
 import Services from './sections/Services/Services'
+import Citations from './sections/Citations/Citations'
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <main>
                 <Banner />
                 <APropos />
+                <Citations />
                 <Services />
             </main>
             <Footer />
