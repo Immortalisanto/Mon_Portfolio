@@ -37,26 +37,27 @@
                 @include font-size-title1;
             }
         }
-    }
 
-    .roundPositionIndicatorBlock {
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        .swiper-pagination {
+            height: 50px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        &__round {
-            @include bubble-shadow;
-            background-color: $text-color-light;
-            border-radius: 10px;
-            margin: 20px;
-            width: 15px;
-            height: 15px;
-            cursor: pointer;
-        }
+            .swiper-pagination-bullet {
+                @include bubble-shadow;
+                background-color: $text-color-light;
+                border-radius: 10px;
+                width: 15px;
+                height: 15px;
+                margin: 20px !important;
+                opacity: 1;
+            }
 
-        .currentPosition {
-            background-color: $background-color-4;
+            .swiper-pagination-bullet-active {
+                background-color: $background-color-4;
+            }
         }
     }
 }

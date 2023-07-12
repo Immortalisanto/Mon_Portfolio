@@ -1,49 +1,36 @@
 import './Citations.scss'
 import { CitationsData } from '../../data/CitationsData'
-import { useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 export default function Citations() {
-    const [current, setCurrent] = useState(0)
-    const length = CitationsData.length
-
-    const handleClick = (index) => {
-        setCurrent(index)
-    }
-
     return (
         <section className="citations">
-            {CitationsData.map(({ quote, author, index }) => {
-                return (
-                    <div
-                        className="citations__slide"
-                        key={`${index}-${quote
+            <Swiper
+                className="citations__slide"
+                modules={[Pagination, Autoplay]}
+                speed={2000}
+                autoplay={{ delay: 8000 }}
+                pagination={{ clickable: true }}
+                slidesPerView={1}>
+                {CitationsData.map((citation) => (
+                    <SwiperSlide
+                        key={`${citation.index}-${citation.quote
                             .slice(0, 10)
                             .replaceAll(' ', '&')}`}>
-                        {index === current && (
-                            <figure className="quoteBox">
-                                <blockquote className="quoteBox__quote">
-                                    {quote}
-                                </blockquote>
-                                <figcaption className="quoteBox__author">
-                                    {author}
-                                </figcaption>
-                            </figure>
-                        )}
-                    </div>
-                )
-            })}
-            <div className="roundPositionIndicatorBlock">
-                {[...Array(length)].map((e, index) => (
-                    <div
-                        className={
-                            current === index
-                                ? 'currentPosition roundPositionIndicatorBlock__round'
-                                : 'roundPositionIndicatorBlock__round'
-                        }
-                        key={index}
-                        onClick={() => handleClick(index)}></div>
+                        <figure className="quoteBox">
+                            <blockquote className="quoteBox__quote">
+                                {citation.quote}
+                            </blockquote>
+                            <figcaption className="quoteBox__author">
+                                {citation.author}
+                            </figcaption>
+                        </figure>
+                    </SwiperSlide>
                 ))}
-            </div>
+            </Swiper>
         </section>
     )
 }
