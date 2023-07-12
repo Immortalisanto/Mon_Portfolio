@@ -11,10 +11,10 @@ export default function Citations() {
             <Swiper
                 className="citations__slide"
                 modules={[Pagination, Autoplay]}
+                loop={true}
                 speed={2000}
-                autoplay={{ delay: 8000 }}
-                pagination={{ clickable: true }}
-                slidesPerView={1}>
+                autoplay={{ delay: 6000 }}
+                pagination={{ clickable: true }}>
                 {CitationsData.map((citation) => (
                     <SwiperSlide
                         key={`${citation.index}-${citation.quote
