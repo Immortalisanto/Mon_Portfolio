@@ -5,6 +5,7 @@ import Banner from './sections/Banner/Banner'
 import APropos from './sections/APropos/APropos'
 import Services from './sections/Services/Services'
 import Citations from './sections/Citations/Citations'
+import Realisations from './sections/Realisations/Realisations'
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <main>
                 <Banner />
                 <APropos />
+                <Realisations />
                 <Citations />
                 <Services />
             </main>

@@ -1,0 +1,54 @@
+@import '../../assets/variables.scss';
+
+.realisations {
+    height: 580px;
+    background-color: $background-color-5;
+
+    &__title {
+        @include font-size-title2;
+        font-family: $text-font-1;
+        text-align: center;
+        width: 360px;
+        height: 50px;
+        margin: auto;
+        padding-top: 25px;
+    }
+
+    &__slide {
+        height: 420px;
+        width: 1115px;
+        margin-top: 50px;
+        padding-left: 100px;
+
+        .work {
+            &__image {
+                @include border-radius;
+                @include work-shadow;
+                cursor: pointer;
+            }
+        }
+
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                @include bubble-shadow;
+                background-color: $text-color-light;
+                border-radius: 10px;
+                width: 15px;
+                height: 15px;
+                margin: 20px !important;
+                opacity: 1;
+            }
+
+            .swiper-pagination-bullet-active {
+                background-color: $background-color-2;
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 150px;
+            color: $text-color-light;
+            @include drop-shadow;
+        }
+    }
+}

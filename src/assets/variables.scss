@@ -52,6 +52,10 @@ $text-color-light: #ffffff;
     box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
+@mixin work-shadow {
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
 @mixin bubble-shadow {
     box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.25);
 }
