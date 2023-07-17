@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { RealisationsData } from '../../data/RealisationsData'
+import { RealisationsData } from '../../../data/RealisationsData'
 
 export default function Realisations() {
     return (

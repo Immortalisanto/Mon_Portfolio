@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import logoLinkedIn from '../../assets/images/linkedIn.png'
-import logoGithub from '../../assets/images/github.png'
+import logoLinkedIn from '../../../assets/images/linkedIn.png'
+import logoGithub from '../../../assets/images/github.png'
 import './Footer-style.scss'
 
 export default function Footer() {

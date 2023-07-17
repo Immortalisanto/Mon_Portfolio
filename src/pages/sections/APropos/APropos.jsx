@@ -1,6 +1,6 @@
 import './APropos.scss'
-import { AProposData } from '../../data/AProposData'
-import InformationBox from '../../components/InformationBox/InformationBox'
+import { AProposData } from '../../../data/AProposData'
+import InformationBox from '../../../components/InformationBox/InformationBox'
 
 export default function APropos() {
     return (

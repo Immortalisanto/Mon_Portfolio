@@ -1,7 +1,7 @@
 import './Services.scss'
-import { ServicesData } from '../../data/ServicesData'
-import ServiceBox from '../../components/ServiceBox/ServiceBox'
-import TagService from '../../components/ServiceBox/TagService/TagService'
+import { ServicesData } from '../../../data/ServicesData'
+import ServiceBox from '../../../components/ServiceBox/ServiceBox'
+import TagService from '../../../components/ServiceBox/TagService/TagService'
 
 export default function Services() {
     return (

@@ -1,6 +1,6 @@
 import './Banner.scss'
-import bannerDesktopParallax from '../../assets/images/banner-desktop-xl.jpg'
-import Button from '../../components/Button/Button.jsx'
+import bannerDesktopParallax from '../../../assets/images/banner-desktop-xl.jpg'
+import Button from '../../../components/Button/Button.jsx'
 import { ParallaxBanner } from 'react-scroll-parallax'
 
 export default function Banner() {

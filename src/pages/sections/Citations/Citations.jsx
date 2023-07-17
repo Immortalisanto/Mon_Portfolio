@@ -1,5 +1,5 @@
 import './Citations.scss'
-import { CitationsData } from '../../data/CitationsData'
+import { CitationsData } from '../../../data/CitationsData'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
