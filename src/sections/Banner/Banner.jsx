@@ -7,7 +7,7 @@ export default function Banner() {
     return (
         <section className="banner">
             <ParallaxBanner
-                layers={[{ image: bannerDesktopParallax, speed: -20 }]}
+                layers={[{ image: bannerDesktopParallax, speed: -35 }]}
                 className="banner__parallaxBanner"
             />
             <div className="welcomeTextAndContactButtonContainer">
