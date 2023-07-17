@@ -1,11 +1,14 @@
 @import '../../assets/variables.scss';
+@import '../../assets/variables-SCSS/colors.scss';
+@import '../../assets/variables-SCSS/font-family.scss';
+@import '../../assets/variables-SCSS/font-size.scss';
 
 .informationBox {
     width: 340px;
     height: 340px;
     @include box-shadow;
     @include border-radius;
-    background-color: $background-color-5;
+    background-color: $secondary-color;
 
     &__title {
         width: 300px;
@@ -13,10 +16,10 @@
         line-height: 50px;
         text-align: center;
         margin: 10px auto 15px auto;
-        font-family: $text-font-1;
-        @include font-size-title3;
+        font-family: $font-family-title;
+        @include font-size-title-large;
         @include drop-shadow;
-        color: $text-color-light;
+        color: $light-color;
     }
 
     &__description {
@@ -28,9 +31,9 @@
         flex-direction: column;
         justify-content: space-around;
         text-align: center;
-        font-family: $text-font-2;
-        color: $text-color-light;
-        @include font-size-body;
+        font-family: $font-family-body;
+        color: $light-color;
+        @include font-size-body-medium;
         @include drop-shadow;
 
         &__paragraph {

@@ -1,8 +1,11 @@
 @import '../../../assets/variables.scss';
+@import '../../../assets/variables-SCSS/colors.scss';
+@import '../../../assets/variables-SCSS/font-family.scss';
+@import '../../../assets/variables-SCSS/font-size.scss';
 
 .footer {
     height: 300px;
-    background-color: $background-color-5;
+    background-color: $secondary-color;
 
     &__logo {
         width: 190px;
@@ -19,10 +22,10 @@
 
     &__copyright {
         text-align: center;
-        color: $text-color-light;
-        font-family: $text-font-2;
+        color: $light-color;
+        font-family: $font-family-body;
         @include drop-shadow;
-        @include font-size-body;
+        @include font-size-body-medium;
         height: 50px;
         line-height: 50px;
         margin-top: 30px;
@@ -41,11 +44,11 @@
             margin: 0;
 
             .linksLegalInformations {
-                color: $text-color-light;
-                font-family: $text-font-2;
+                color: $light-color;
+                font-family: $font-family-body;
                 text-decoration: none;
                 @include drop-shadow;
-                @include font-size-body;
+                @include font-size-body-medium;
 
                 .underlineItem {
                     @include underline;

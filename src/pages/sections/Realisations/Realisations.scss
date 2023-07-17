@@ -1,12 +1,15 @@
+@import '../../../assets/variables-SCSS/colors.scss';
 @import '../../../assets/variables.scss';
+@import '../../../assets/variables-SCSS/font-family.scss';
+@import '../../../assets/variables-SCSS/font-size.scss';
 
 .realisations {
     height: 580px;
-    background-color: $background-color-5;
+    background-color: $secondary-color;
 
     &__title {
-        @include font-size-title2;
-        font-family: $text-font-1;
+        @include font-size-title-medium;
+        font-family: $font-family-title;
         text-align: center;
         width: 360px;
         height: 50px;
@@ -31,7 +34,7 @@
         .swiper-pagination {
             .swiper-pagination-bullet {
                 @include bubble-shadow;
-                background-color: $text-color-light;
+                background-color: $light-color;
                 border-radius: 10px;
                 width: 15px;
                 height: 15px;
@@ -40,14 +43,14 @@
             }
 
             .swiper-pagination-bullet-active {
-                background-color: $background-color-2;
+                background-color: $light-complementary-color;
             }
         }
 
         .swiper-button-next,
         .swiper-button-prev {
             top: 150px;
-            color: $text-color-light;
+            color: $light-color;
             @include drop-shadow;
         }
     }

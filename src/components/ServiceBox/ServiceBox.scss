@@ -1,11 +1,14 @@
 @import '../../assets/variables.scss';
+@import '../../assets/variables-SCSS/colors.scss';
+@import '../../assets/variables-SCSS/font-family.scss';
+@import '../../assets/variables-SCSS/font-size.scss';
 
 .serviceBox {
     width: 340px;
     height: 400px;
     @include border-radius;
     @include box-shadow;
-    background-color: $background-color-5;
+    background-color: $secondary-color;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,19 +21,19 @@
         height: 60px;
         line-height: 60px;
         text-align: center;
-        @include font-size-title3;
+        @include font-size-title-small;
         @include drop-shadow;
-        color: $text-color-light;
-        font-family: $text-font-1;
+        color: $light-color;
+        font-family: $font-family-title;
     }
 
     &__text {
         width: 250px;
         text-align: center;
-        @include font-size-body;
+        @include font-size-body-medium;
         @include drop-shadow;
-        color: $text-color-light;
-        font-family: $text-font-2;
+        color: $light-color;
+        font-family: $font-family-body;
     }
 
     &__tags {

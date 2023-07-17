@@ -1,15 +1,17 @@
 @import '../../assets/variables.scss';
+@import '../../assets/variables-SCSS/colors.scss';
+@import '../../assets/variables-SCSS/font-family.scss';
 
 .button {
     @include border-radius;
     @include box-shadow;
     width: 300px;
     height: 60px;
-    background-color: $background-color-5;
-    color: $text-color-light;
+    background-color: $secondary-color;
+    color: $light-color;
     border: 0;
     cursor: pointer;
-    font-family: $text-font-2;
+    font-family: $font-family-body;
     font-size: 20px;
 
     &__text {

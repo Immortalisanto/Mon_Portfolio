@@ -1,48 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
-
-// Font variables
-$text-font-1: 'Pacifico', serif;
-$text-font-2: 'Roboto', sans-serif;
-
-// Colors variables
-$background-color-1: #f1f1d3;
-$background-color-2: #e3ebd0;
-$background-color-3: #c7ddc5;
-$background-color-4: #9fcda8;
-$background-color-5: #7dc2a5;
-$text-color-light: #ffffff;
-
-// Font size variables
-@mixin font-size-title1 {
-    font-size: 36px;
-    font-weight: 400;
-}
-
-@mixin font-size-title2 {
-    font-size: 28px;
-    font-weight: 400;
-}
-
-@mixin font-size-title3 {
-    font-size: 24px;
-    font-weight: 400;
-}
-
-@mixin font-size-body {
-    font-size: 20px;
-    font-weight: 400;
-}
-
-@mixin font-size-body-medium {
-    font-size: 22px;
-    font-weight: 400;
-}
-
-@mixin font-size-body-highlight {
-    font-size: 20px;
-    font-weight: 600;
-}
-
 // Shadow variables
 @mixin drop-shadow {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -73,7 +28,7 @@ $text-color-light: #ffffff;
         left: 0;
         width: 100%;
         height: 1px;
-        background-color: $text-color-light;
+        background-color: $light-color;
         transform: scaleX(0);
         transform-origin: left;
         transition: transform 400ms ease-in-out;

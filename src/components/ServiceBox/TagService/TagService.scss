@@ -1,8 +1,11 @@
 @import '../../../assets/variables.scss';
+@import '../../../assets/variables-SCSS/colors.scss';
+@import '../../../assets/variables-SCSS/font-family.scss';
+@import '../../../assets/variables-SCSS/font-size.scss';
 
 .tagService {
     width: 80px;
-    background-color: $text-color-light;
+    background-color: $light-color;
     text-align: center;
     border-radius: 30px;
     height: 35px;
@@ -12,9 +15,9 @@
     @include bubble-shadow;
 
     &__ability {
-        @include font-size-body-highlight;
-        color: $background-color-5;
-        font-family: $text-font-2;
+        @include font-size-body-medium-highlight;
+        color: $secondary-color;
+        font-family: $font-family-body;
         font-size: 90%;
     }
 }
