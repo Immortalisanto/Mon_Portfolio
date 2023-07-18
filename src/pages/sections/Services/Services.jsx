@@ -1,7 +1,7 @@
 import './Services.scss'
 import { ServicesData } from '../../../data/ServicesData'
 import ServiceBox from '../../../components/ServiceBox/ServiceBox'
-import TagService from '../../../components/ServiceBox/TagService/TagService'
+import Tag from '../../../components/Tag/Tag'
 
 export default function Services() {
     return (
@@ -16,7 +16,7 @@ export default function Services() {
                         title={title}
                         description={description}
                         tags={tags.map((tag, index) => (
-                            <TagService
+                            <Tag
                                 key={`${tag}-${index}`}
                                 tag={tag}
                             />

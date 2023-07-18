@@ -29,6 +29,44 @@
                 @include border-radius;
                 @include work-shadow;
                 cursor: pointer;
+                opacity: 1;
+
+                &--transparent {
+                    @include border-radius;
+                    @include work-shadow;
+                    cursor: pointer;
+                    opacity: 0.03;
+                    transition: opacity 500ms ease-in-out;
+                }
+            }
+
+            .infoSlideBox {
+                background-color: rgba($dark-complementary-color, 0.8);
+                width: 450px;
+                height: 300px;
+                @include border-radius;
+                position: relative;
+                top: -305px;
+                z-index: -1;
+
+                &__title {
+                    font-family: $font-family-title;
+                    @include font-size-title-medium;
+                    color: $light-color;
+                    margin-top: 0;
+                    text-align: center;
+                    padding-top: 50px;
+                }
+
+                &__tags {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    height: 150px;
+                    width: 380px;
+                    margin: auto;
+                }
             }
         }
 

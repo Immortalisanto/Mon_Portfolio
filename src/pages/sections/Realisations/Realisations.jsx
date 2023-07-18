@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { RealisationsData } from '../../../data/RealisationsData'
+import Tag from '../../../components/Tag/Tag'
 import './Realisations.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -11,6 +12,7 @@ export default function Realisations() {
     const [hoverStates, setHoverStates] = useState(
         Array(RealisationsData.length).fill(false)
     )
+    const updatedHoverStates = [...hoverStates]
 
     return (
         <section
@@ -34,24 +36,31 @@ export default function Realisations() {
                         <img
                             src={work.image}
                             alt={work.title}
-                            className="work__image"
+                            className={
+                                updatedHoverStates[index] === true
+                                    ? 'work__image--transparent'
+                                    : 'work__image'
+                            }
                             onMouseEnter={() => {
-                                const updatedHoverStates = [...hoverStates]
                                 updatedHoverStates[index] = true
                                 setHoverStates(updatedHoverStates)
                             }}
                             onMouseLeave={() => {
-                                const updatedHoverStates = [...hoverStates]
                                 updatedHoverStates[index] = false
                                 setHoverStates(updatedHoverStates)
                             }}
                         />
                         {hoverStates[index] && (
-                            <div>
-                                <h3>{work.title}</h3>
-                                <div>
+                            <div className="infoSlideBox">
+                                <h3 className="infoSlideBox__title">
+                                    {work.title}
+                                </h3>
+                                <div className="infoSlideBox__tags">
                                     {work.tags.map((tag, index) => (
-                                        <div key={`${tag}-${index}`}>{tag}</div>
+                                        <Tag
+                                            key={`${tag}-${index}`}
+                                            tag={tag}
+                                        />
                                     ))}
                                 </div>
                             </div>
