@@ -22,7 +22,7 @@ export default function Realisations() {
                 modules={[Pagination, Autoplay, Navigation]}
                 speed={500}
                 navigation
-                autoplay={{ delay: 6000 }}
+                autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
                 pagination={{ clickable: true }}
                 slidesPerView={2}>
                 {RealisationsData.map((work, index) => (
