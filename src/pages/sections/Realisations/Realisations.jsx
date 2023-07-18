@@ -1,12 +1,17 @@
-import { Autoplay, Navigation, Pagination } from 'swiper/modules'
-import './Realisations.scss'
+import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import { RealisationsData } from '../../../data/RealisationsData'
+import './Realisations.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { RealisationsData } from '../../../data/RealisationsData'
 
 export default function Realisations() {
+    const [hoverStates, setHoverStates] = useState(
+        Array(RealisationsData.length).fill(false)
+    )
+
     return (
         <section
             className="realisations"
@@ -20,7 +25,7 @@ export default function Realisations() {
                 autoplay={{ delay: 6000 }}
                 pagination={{ clickable: true }}
                 slidesPerView={2}>
-                {RealisationsData.map((work) => (
+                {RealisationsData.map((work, index) => (
                     <SwiperSlide
                         className="work"
                         key={`${work.index}-${work.title
@@ -30,7 +35,27 @@ export default function Realisations() {
                             src={work.image}
                             alt={work.title}
                             className="work__image"
+                            onMouseEnter={() => {
+                                const updatedHoverStates = [...hoverStates]
+                                updatedHoverStates[index] = true
+                                setHoverStates(updatedHoverStates)
+                            }}
+                            onMouseLeave={() => {
+                                const updatedHoverStates = [...hoverStates]
+                                updatedHoverStates[index] = false
+                                setHoverStates(updatedHoverStates)
+                            }}
                         />
+                        {hoverStates[index] && (
+                            <div>
+                                <h3>{work.title}</h3>
+                                <div>
+                                    {work.tags.map((tag, index) => (
+                                        <div key={`${tag}-${index}`}>{tag}</div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </SwiperSlide>
                 ))}
             </Swiper>
