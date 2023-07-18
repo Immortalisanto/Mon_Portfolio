@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { RealisationsData } from '../../../data/RealisationsData'
 import Tag from '../../../components/Tag/Tag'
+import Modal from '../../../components/Modal/Modal'
 import './Realisations.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -14,11 +15,17 @@ export default function Realisations() {
     )
     const updatedHoverStates = [...hoverStates]
 
+    const [isModalOpen, setIsModalOpen] = useState(
+        Array(RealisationsData.length).fill(false)
+    )
+    const updatedIsModalOpen = [...isModalOpen]
+
     return (
         <section
             className="realisations"
             id="realisationsAnchor">
             <h2 className="realisations__title">Mes réalisations</h2>
+
             <Swiper
                 className="realisations__slide"
                 modules={[Pagination, Autoplay, Navigation]}
@@ -49,12 +56,35 @@ export default function Realisations() {
                                 updatedHoverStates[index] = false
                                 setHoverStates(updatedHoverStates)
                             }}
+                            onClick={() => {
+                                updatedIsModalOpen[index] = true
+                                setIsModalOpen(updatedIsModalOpen)
+                            }}
                         />
+                        {isModalOpen[index] && (
+                            <Modal
+                                title={work.title}
+                                tags={work.tags.map((tag, index) => (
+                                    <Tag
+                                        key={`${tag}-${index}`}
+                                        tag={tag}
+                                    />
+                                ))}
+                                description={work.description}
+                                image={work.image}
+                                onClose={() => {
+                                    updatedIsModalOpen[index] = false
+                                    setIsModalOpen(updatedIsModalOpen)
+                                }}
+                            />
+                        )}
+
                         {hoverStates[index] && (
                             <div className="infoSlideBox">
                                 <h3 className="infoSlideBox__title">
                                     {work.title}
                                 </h3>
+
                                 <div className="infoSlideBox__tags">
                                     {work.tags.map((tag, index) => (
                                         <Tag

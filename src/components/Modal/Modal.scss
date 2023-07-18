@@ -1,0 +1,85 @@
+@import '../../assets/variables-SCSS/border-radius.scss';
+@import '../../assets/variables-SCSS/colors.scss';
+@import '../../assets/variables-SCSS/font-family.scss';
+@import '../../assets/variables-SCSS/font-size.scss';
+@import '../../assets/variables-SCSS/shadow.scss';
+
+.modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.35);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background-color: $primary-color;
+    width: 80%;
+    @include border-radius;
+    @include box-shadow;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__cross {
+        width: 35px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        @include drop-shadow;
+    }
+
+    &__title {
+        margin: 30px auto 25px auto;
+        text-align: center;
+        font-family: $font-family-title;
+        @include font-size-title-large;
+    }
+
+    &__tags {
+        display: flex;
+        justify-content: space-around;
+        align-items: space-between;
+        padding: 0 20px;
+        max-width: 380px;
+        width: 40%;
+        flex-wrap: wrap;
+
+        .tag {
+            margin: 10px 3px;
+        }
+    }
+
+    &__descriptionBox {
+        background-color: $secondary-color;
+        @include border-radius;
+        @include box-shadow;
+        width: 90%;
+        margin: 30px auto;
+        padding: 30px 0;
+
+        .description {
+            color: $light-color;
+            width: 90%;
+            font-family: $font-family-body;
+            @include font-size-body-medium;
+            @include drop-shadow;
+            text-align: center;
+            margin: auto;
+        }
+    }
+
+    &__image {
+        border: 2px $secondary-color solid;
+        @include border-radius;
+        @include box-shadow;
+        width: 450px;
+        margin-bottom: 20px;
+    }
+}
