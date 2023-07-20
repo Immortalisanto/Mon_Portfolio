@@ -1,0 +1,93 @@
+@import '../../assets/variables-SCSS/colors.scss';
+@import '../../assets/variables-SCSS/font-family.scss';
+@import '../../assets/variables-SCSS/font-size.scss';
+@import '../../assets/variables-SCSS/shadow.scss';
+
+.collapse {
+    border: 1px $secondary-color solid;
+    border-radius: 20px 20px 15px 15px;
+    width: 500px;
+    padding: 0;
+    @include box-shadow;
+
+    &__button {
+        border: 0;
+        width: 100%;
+        height: 60px;
+        background-color: $secondary-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 15px 15px 0 0;
+        cursor: pointer;
+        transition: border-radius 400ms ease-in-out;
+
+        &__title {
+            @include drop-shadow;
+            @include font-size-title-small;
+            font-family: $font-family-title;
+            color: $light-color;
+            margin-left: 15px;
+        }
+
+        &__arrow {
+            &--top {
+                transform: rotate(-90deg);
+                transition: transform 200ms ease-in-out;
+                width: 30px;
+                margin-right: 15px;
+                @include drop-shadow;
+            }
+
+            &--down {
+                transform: rotate(90deg);
+                transition: transform 400ms ease-in-out;
+                width: 30px;
+                margin-right: 15px;
+                @include drop-shadow;
+            }
+        }
+    }
+
+    .buttonRadius {
+        border-radius: 15px;
+        transition: border-radius 200ms ease-in-out;
+    }
+
+    .skillBox {
+        &--open {
+            border: 1px $secondary-color solid;
+            border-radius: 0 0 15px 15px;
+            background-color: $light-color;
+            margin: 0;
+        }
+
+        &--closed {
+            background-color: $light-color;
+            display: none;
+        }
+
+        &__skill {
+            border: 1px red solid;
+
+            &__title {
+                font-family: $font-family-body;
+                @include font-size-body-medium-highlight;
+                color: $secondary-color;
+            }
+
+            &__progressBar {
+                border: 1px $secondary-color solid;
+                width: 440px;
+                height: 8px;
+                @include bar-shadow;
+                margin: auto;
+
+                &--level {
+                    background-color: $secondary-color;
+                    height: 8px;
+                }
+            }
+        }
+    }
+}
