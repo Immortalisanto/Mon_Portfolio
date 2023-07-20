@@ -27,6 +27,7 @@ export default function Competences() {
                 </div>
                 <div className="CV">
                     <img
+                        className="CV__image"
                         src={CV}
                         alt="Curriculum Vitae d'Anthony Tur"
                     />

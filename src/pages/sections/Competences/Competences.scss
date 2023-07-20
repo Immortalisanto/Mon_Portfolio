@@ -1,4 +1,53 @@
+@import '../../../assets/variables-SCSS/colors.scss';
+@import '../../../assets/variables-SCSS/font-size.scss';
+@import '../../../assets/variables-SCSS/font-family.scss';
+@import '../../../assets/variables-SCSS/border-radius.scss';
+@import '../../../assets/variables-SCSS/shadow.scss';
+
 .competences {
-    border: 1px red solid;
-    height: 1180px;
+    min-height: 1180px;
+    background-color: $tertiary-color;
+
+    &__title {
+        @include font-size-title-medium;
+        font-family: $font-family-title;
+        width: 360px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin: auto;
+        padding-top: 20px;
+    }
+
+    &__text {
+        width: 1000px;
+        text-align: center;
+        @include font-size-body-large;
+        font-family: $font-family-body;
+        margin: 30px auto 50px auto;
+    }
+
+    .collapsesAndCV {
+        display: flex;
+        justify-content: space-between;
+        width: 1200px;
+        margin: auto;
+
+        .collapses {
+            border: 1px blue solid;
+        }
+
+        .CV {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__image {
+                border: 3px $light-color solid;
+                @include border-radius;
+                @include box-shadow;
+                margin-bottom: 60px;
+            }
+        }
+    }
 }
