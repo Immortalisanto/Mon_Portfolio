@@ -19,7 +19,13 @@ export default function Header() {
                         </span>
                     </li>
                     <li className="navList__listItem">
-                        <span className="underlineItem">Compétences</span>
+                        <span className="underlineItem">
+                            <a
+                                href="#competencesAnchor"
+                                className="underlineItem__link">
+                                Compétences
+                            </a>
+                        </span>
                     </li>
                     <li className="navList__listItem navList__listItem--avatar">
                         <img

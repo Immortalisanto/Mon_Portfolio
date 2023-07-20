@@ -6,6 +6,7 @@ import APropos from './sections/APropos/APropos'
 import Services from './sections/Services/Services'
 import Citations from './sections/Citations/Citations'
 import Realisations from './sections/Realisations/Realisations'
+import Competences from './sections/Competences/Competences'
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <main>
                 <Banner />
                 <APropos />
+                <Competences />
                 <Realisations />
                 <Citations />
                 <Services />
