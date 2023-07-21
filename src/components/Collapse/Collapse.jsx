@@ -2,8 +2,8 @@ import './Collapse.scss'
 import arrow from '../../assets/images/arrow.png'
 import { useState } from 'react'
 
-export default function Collapse({ categorie, skills }) {
-    const [isOpen, setIsOpen] = useState(true)
+export default function Collapse({ categorie, skills, initialOpen }) {
+    const [isOpen, setIsOpen] = useState(initialOpen)
 
     return (
         <div className="collapse">
@@ -23,13 +23,19 @@ export default function Collapse({ categorie, skills }) {
                 {skills.map(({ skill, level, index }) => (
                     <div
                         key={`${skill}-${index}`}
-                        className="skillBox__skill">
-                        <h4 className="skillBox__skill__title">{skill}</h4>
-                        <div className="skillBox__skill__progressBar">
-                            <div
-                                className="skillBox__skill__progressBar--level"
-                                style={{ width: `${level}` }}></div>
-                        </div>
+                        className={`skillBox__skill--${
+                            isOpen ? 'open' : 'closed'
+                        }`}>
+                        {isOpen && (
+                            <h4 className="skillBox__skill__title">{skill}</h4>
+                        )}
+                        {isOpen && (
+                            <div className="skillBox__skill__progressBar">
+                                <div
+                                    className="skillBox__skill__progressBar--level"
+                                    style={{ width: `${level}` }}></div>
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>

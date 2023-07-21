@@ -3,6 +3,7 @@ import Button from '../../../components/Button/Button'
 import CV from '../../../assets/images/CV.png'
 import Collapse from '../../../components/Collapse/Collapse'
 import { CompetencesData } from '../../../data/CompetencesData'
+import CVPDF from '../../../assets/CV.pdf'
 
 export default function Competences() {
     return (
@@ -22,6 +23,7 @@ export default function Competences() {
                             key={`${categorie}-${index}`}
                             categorie={categorie}
                             skills={skills}
+                            initialOpen={index === 0 ? true : false}
                         />
                     ))}
                 </div>
@@ -31,7 +33,11 @@ export default function Competences() {
                         src={CV}
                         alt="Curriculum Vitae d'Anthony Tur"
                     />
-                    <Button text="Télécharger" />
+                    <a
+                        href={CVPDF}
+                        download>
+                        <Button text="Télécharger" />
+                    </a>
                 </div>
             </div>
         </section>

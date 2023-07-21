@@ -2,6 +2,7 @@
 @import '../../assets/variables-SCSS/font-family.scss';
 @import '../../assets/variables-SCSS/font-size.scss';
 @import '../../assets/variables-SCSS/shadow.scss';
+@import '../../assets/variables-SCSS/border-radius.scss';
 
 .collapse {
     border: 1px $secondary-color solid;
@@ -9,6 +10,7 @@
     width: 500px;
     padding: 0;
     @include box-shadow;
+    margin-bottom: 40px;
 
     &__button {
         border: 0;
@@ -20,7 +22,7 @@
         align-items: center;
         border-radius: 15px 15px 0 0;
         cursor: pointer;
-        transition: border-radius 400ms ease-in-out;
+        transition: border-radius 100ms ease-out;
 
         &__title {
             @include drop-shadow;
@@ -51,7 +53,7 @@
 
     .buttonRadius {
         border-radius: 15px;
-        transition: border-radius 200ms ease-in-out;
+        transition: border-radius 400ms ease-out;
     }
 
     .skillBox {
@@ -60,28 +62,43 @@
             border-radius: 0 0 15px 15px;
             background-color: $light-color;
             margin: 0;
+            padding-bottom: 30px;
+            max-height: 500px;
+            transition: max-height 200ms ease-in-out;
         }
 
         &--closed {
             background-color: $light-color;
-            display: none;
+            max-height: 0px;
+            transition: max-height 200ms ease-in-out;
         }
 
         &__skill {
-            border: 1px red solid;
+            &--open {
+                max-height: 500px;
+                transition: max-height 200ms ease-in-out;
+            }
+
+            &--closed {
+                max-height: 0;
+                transition: max-height 200ms ease-in-out;
+            }
 
             &__title {
                 font-family: $font-family-body;
                 @include font-size-body-medium-highlight;
                 color: $secondary-color;
+                margin-left: 5%;
+                margin-bottom: 10px;
             }
 
             &__progressBar {
                 border: 1px $secondary-color solid;
-                width: 440px;
+                width: 90%;
                 height: 8px;
                 @include bar-shadow;
                 margin: auto;
+                @include border-radius;
 
                 &--level {
                     background-color: $secondary-color;
