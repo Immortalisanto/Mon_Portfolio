@@ -10,12 +10,9 @@
     &__title {
         @include font-size-title-medium;
         font-family: $font-family-title;
-        width: 360px;
-        height: 50px;
-        line-height: 50px;
         text-align: center;
-        margin: auto;
-        padding-top: 20px;
+        margin-top: 0;
+        padding-top: 30px;
     }
 
     &__boxes {

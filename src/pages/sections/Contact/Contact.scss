@@ -1,0 +1,133 @@
+@import '../../../assets/variables-SCSS/border-radius.scss';
+@import '../../../assets/variables-SCSS/colors.scss';
+@import '../../../assets/variables-SCSS/font-family.scss';
+@import '../../../assets/variables-SCSS/font-size.scss';
+@import '../../../assets/variables-SCSS/shadow.scss';
+
+.contact {
+    background-color: $light-complementary-color;
+    height: 900px;
+
+    &__title {
+        font-family: $font-family-title;
+        @include font-size-title-medium;
+        text-align: center;
+        margin-top: 0;
+        padding-top: 30px;
+    }
+
+    &__text {
+        text-align: center;
+        font-family: $font-family-body;
+        @include font-size-body-medium;
+        margin-top: 40px;
+    }
+
+    &__form {
+        background-color: $tertiary-color;
+        max-width: 1200px;
+        margin: 40px auto;
+        @include border-radius;
+        @include box-shadow;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        &__box {
+            margin: 0 10%;
+
+            .displayFlexFourBubbles {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &__displayFlexTwoBubbles {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            .form__bubbleForm {
+                height: 30px;
+                border: 3px $secondary-color solid;
+                border-radius: 25px;
+                padding-left: 20px;
+                @include bubble-shadow;
+                color: black;
+                font-family: $font-family-body;
+                @include font-size-body-medium-highlight;
+                font-size: 16px;
+                margin-bottom: 25px;
+                width: 45%;
+                background-color: $light-color;
+                transition: background-color 400ms ease-in-out;
+
+                &--largeWidth {
+                    width: calc(100% - 28px);
+                }
+
+                &--largeBox {
+                    width: calc(100% - 28px);
+                    min-height: 200px;
+                    padding-top: 10px;
+                    resize: none;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .form__bubbleForm:focus {
+                outline: none;
+                background-color: $primary-color;
+            }
+
+            .form__bubbleForm::placeholder {
+                color: $dark-complementary-color;
+                font-family: $font-family-body;
+                @include font-size-body-medium;
+                font-size: 16px;
+                opacity: 1;
+                transition: opacity 400ms ease-in-out;
+            }
+
+            .form__bubbleForm:focus::placeholder {
+                opacity: 0;
+                transition: opacity 400ms ease-in-out;
+            }
+
+            .form__checkPersonalData {
+                display: flex;
+                justify-content: center;
+                width: 95%;
+                margin: auto;
+
+                &__checkbox {
+                    appearance: none;
+                    width: 15px;
+                    height: 15px;
+                    accent-color: $secondary-color;
+                    cursor: pointer;
+                    border: 2px $secondary-color solid;
+                    border-radius: 5px;
+                    background-color: $light-color;
+                }
+
+                &__checkbox:checked {
+                    background-color: $secondary-color;
+                }
+
+                &__text {
+                    width: 95%;
+                    text-align: center;
+                    @include font-size-body-medium;
+                    font-size: 16px;
+                    font-family: $font-family-body;
+                    margin: 0;
+                }
+            }
+            .form__submit {
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+            }
+        }
+    }
+}

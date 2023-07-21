@@ -7,6 +7,7 @@ import Services from './sections/Services/Services'
 import Citations from './sections/Citations/Citations'
 import Realisations from './sections/Realisations/Realisations'
 import Competences from './sections/Competences/Competences'
+import Contact from './sections/Contact/Contact'
 
 export default function Home() {
     return (
@@ -19,6 +20,7 @@ export default function Home() {
                 <Realisations />
                 <Citations />
                 <Services />
+                <Contact />
             </main>
             <Footer />
         </React.Fragment>

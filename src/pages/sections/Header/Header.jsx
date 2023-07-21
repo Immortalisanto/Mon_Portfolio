@@ -53,7 +53,13 @@ export default function Header() {
                         </span>
                     </li>
                     <li className="navList__listItem">
-                        <span className="underlineItem">Contact</span>
+                        <span className="underlineItem">
+                            <a
+                                href="#contactAnchor"
+                                className="underlineItem__link">
+                                Contact
+                            </a>
+                        </span>
                     </li>
                 </ul>
             </nav>

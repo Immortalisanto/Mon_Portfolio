@@ -19,7 +19,9 @@ export default function Banner() {
                     </h1>
                 </div>
 
-                <Button text="Me contacter" />
+                <a href="#contactAnchor">
+                    <Button text="Me contacter" />
+                </a>
             </div>
         </section>
     )

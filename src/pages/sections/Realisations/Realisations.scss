@@ -12,16 +12,14 @@
         @include font-size-title-medium;
         font-family: $font-family-title;
         text-align: center;
-        width: 360px;
-        height: 50px;
-        margin: auto;
-        padding-top: 25px;
+        margin-top: 0;
+        padding-top: 30px;
     }
 
     &__slide {
         height: 420px;
         width: 1115px;
-        margin-top: 50px;
+        margin-top: 60px;
         padding-left: 100px;
         position: relative;
         z-index: 0;
