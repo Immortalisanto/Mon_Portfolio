@@ -95,3 +95,20 @@
         }
     }
 }
+
+@media screen and (min-width: 1141px) and (max-width: 1240px) {
+    .realisations {
+        &__slide {
+            padding-left: 55px;
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .realisations {
+        &__slide {
+            width: 560px;
+        }
+    }
+}

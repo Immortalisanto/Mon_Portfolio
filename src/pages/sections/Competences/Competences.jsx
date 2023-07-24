@@ -20,6 +20,7 @@ export default function Competences() {
                 <div className="collapses">
                     {CompetencesData.map(({ categorie, skills, index }) => (
                         <Collapse
+                            className="collapses__collapse"
                             key={`${categorie}-${index}`}
                             categorie={categorie}
                             skills={skills}

@@ -6,6 +6,7 @@
     min-height: 580px;
     background-color: $dark-complementary-color;
     border-bottom: 3px $secondary-color solid;
+    padding: 0 10px;
 
     &__title {
         @include font-size-title-medium;
@@ -16,9 +17,71 @@
     }
 
     &__boxes {
+        width: 95%;
         max-width: 1200px;
         margin: 45px auto;
         display: flex;
         justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1140px) {
+    .services {
+        min-height: 500px;
+
+        .serviceBox {
+            width: 300px !important;
+            height: 360px !important;
+
+            &__title {
+                margin-top: 8px !important;
+                font-size: 22px !important;
+            }
+
+            &__text {
+                width: 250px !important;
+                font-size: 18px !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 921px) and (max-width: 1000px) {
+    .services {
+        min-height: 450px;
+
+        .serviceBox {
+            width: 280px !important;
+            height: 310px !important;
+
+            &__title {
+                margin-top: 6px !important;
+                font-size: 20px !important;
+            }
+
+            &__text {
+                width: 250px !important;
+                font-size: 16px !important;
+            }
+
+            &__tags {
+                width: 260px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .services {
+        &__boxes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0;
+
+            .serviceBox {
+                margin-bottom: 30px;
+            }
+        }
     }
 }

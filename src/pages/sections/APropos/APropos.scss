@@ -6,6 +6,7 @@
     background-color: $primary-color;
     border-bottom: 3px $secondary-color solid;
     min-height: 880px;
+    padding: 0 10px;
 
     &__title {
         @include font-size-title-medium;
@@ -36,5 +37,60 @@
         margin: auto;
         display: flex;
         justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1081px) and (max-width: 1250px) {
+    .aPropos {
+        min-height: 920px;
+
+        .informationBox {
+            width: 320px;
+            height: 320px;
+
+            &__title {
+                @include font-size-title-medium;
+            }
+
+            &__description {
+                width: 280px;
+                height: 220px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 951px) and (max-width: 1080px) {
+    .aPropos {
+        min-height: 920px;
+    }
+    .informationBox {
+        width: 300px !important;
+        height: 300px !important;
+
+        &__title {
+            @include font-size-title-small;
+        }
+
+        &__description {
+            width: 280px !important;
+            height: 210px !important;
+            font-size: 17px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .aPropos {
+        &__boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .informationBox {
+                margin-bottom: 30px;
+            }
+        }
     }
 }

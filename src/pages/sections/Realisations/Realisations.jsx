@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import useWindowSize from '../../../assets/hooks/useWindowSize'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { RealisationsData } from '../../../data/RealisationsData'
@@ -10,15 +11,30 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 export default function Realisations() {
+    // state for the information's slide
     const [hoverStates, setHoverStates] = useState(
         Array(RealisationsData.length).fill(false)
     )
     const updatedHoverStates = [...hoverStates]
 
+    // state for the modal's slide
     const [isModalOpen, setIsModalOpen] = useState(
         Array(RealisationsData.length).fill(false)
     )
     const updatedIsModalOpen = [...isModalOpen]
+
+    // detect screen size
+    const [screenWidth, setScreenWidth] = useState()
+
+    const windowWidth = useWindowSize().width
+
+    useEffect(() => {
+        if (windowWidth <= 1140) {
+            setScreenWidth('small')
+        } else {
+            setScreenWidth('large')
+        }
+    }, [windowWidth])
 
     return (
         <section
@@ -33,7 +49,7 @@ export default function Realisations() {
                 navigation
                 autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
                 pagination={{ clickable: true }}
-                slidesPerView={2}>
+                slidesPerView={screenWidth === 'small' ? 1 : 2}>
                 {RealisationsData.map((work, index) => (
                     <SwiperSlide
                         className="work"
