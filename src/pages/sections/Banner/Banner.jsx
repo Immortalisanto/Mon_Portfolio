@@ -1,13 +1,36 @@
 import './Banner.scss'
-import bannerDesktopParallax from '../../../assets/images/banner-desktop-xl.jpg'
+import bannerDesktopParallaxXL from '../../../assets/images/banner-desktop-xl.jpg'
+import bannerDesktopParallaxL from '../../../assets/images/banner-desktop-l.jpg'
 import Button from '../../../components/Button/Button.jsx'
 import { ParallaxBanner } from 'react-scroll-parallax'
+import useWindowSize from '../../../assets/hooks/useWindowSize'
+import { useEffect, useState } from 'react'
 
 export default function Banner() {
+    // detect screen size
+    const [screenWidth, setScreenWidth] = useState()
+    const windowWidth = useWindowSize().width
+
+    useEffect(() => {
+        if (windowWidth <= 1024) {
+            setScreenWidth('small')
+        } else {
+            setScreenWidth('large')
+        }
+    }, [windowWidth])
+
     return (
         <section className="banner">
             <ParallaxBanner
-                layers={[{ image: bannerDesktopParallax, speed: -35 }]}
+                layers={[
+                    {
+                        image:
+                            screenWidth === 'small'
+                                ? bannerDesktopParallaxL
+                                : bannerDesktopParallaxXL,
+                        speed: -35,
+                    },
+                ]}
                 className="banner__parallaxBanner"
             />
             <div className="welcomeTextAndContactButtonContainer">

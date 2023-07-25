@@ -6,7 +6,8 @@
 
 .contact {
     background-color: $light-complementary-color;
-    height: 900px;
+    min-height: 900px;
+    border-bottom: 2px $secondary-color solid;
 
     &__title {
         font-family: $font-family-title;
@@ -20,12 +21,14 @@
         text-align: center;
         font-family: $font-family-body;
         @include font-size-body-medium;
-        margin-top: 40px;
+        margin: 40px auto 0 auto;
+        width: 95%;
     }
 
     &__form {
         background-color: $tertiary-color;
         max-width: 1200px;
+        width: 95%;
         margin: 40px auto;
         @include border-radius;
         @include box-shadow;
@@ -127,6 +130,33 @@
                 display: flex;
                 justify-content: center;
                 margin-top: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contact {
+        &__form {
+            &__box {
+                margin: 0 5%;
+
+                .displayFlexFourBubbles {
+                    &__displayFlexTwoBubbles {
+                        flex-direction: column;
+                    }
+                }
+
+                .form__bubbleForm {
+                    width: calc(100% - 28px);
+                }
+
+                .form__checkPersonalData {
+                    &__text {
+                        font-size: 14px;
+                        margin-left: 10px;
+                    }
+                }
             }
         }
     }

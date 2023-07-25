@@ -58,3 +58,30 @@
         }
     }
 }
+
+@media screen and (max-width: 650px) {
+    .footer {
+        height: 280px;
+
+        &__logo {
+            padding-top: 40px;
+        }
+
+        &__copyright {
+            margin-top: 20px;
+        }
+
+        &__twoLinksForLegalInformations {
+            width: 90%;
+            justify-content: center;
+
+            .legalInformation {
+                width: 220px;
+
+                .linksLegalInformations {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

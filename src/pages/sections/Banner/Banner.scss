@@ -45,3 +45,51 @@
         }
     }
 }
+
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+    .banner {
+        &__parallaxBanner {
+            aspect-ratio: 1 / 1;
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 750px) {
+    .banner {
+        &__parallaxBanner {
+            aspect-ratio: 1 / 1;
+        }
+
+        &__welcomeText {
+            width: 450px;
+
+            &--title {
+                height: 150px;
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner {
+        height: 460px;
+        &__parallaxBanner {
+            aspect-ratio: 1 / 1;
+        }
+
+        &__welcomeText {
+            width: 450px;
+            height: 220px;
+
+            &--title {
+                height: 140px;
+                font-size: 32px;
+            }
+        }
+
+        .welcomeTextAndContactButtonContainer {
+            height: 320px;
+        }
+    }
+}

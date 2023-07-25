@@ -83,3 +83,23 @@
         margin-bottom: 20px;
     }
 }
+
+@media screen and (min-width: 651px) and (max-width: 1000px) {
+    .modalContent {
+        width: 85%;
+
+        &__tags {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .modalContent {
+        width: 95%;
+
+        &__tags {
+            width: 80%;
+        }
+    }
+}

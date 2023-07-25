@@ -19,6 +19,7 @@
 
     &__text {
         max-width: 1000px;
+        width: 95%;
         text-align: center;
         @include font-size-body-large;
         font-family: $font-family-body;
@@ -78,6 +79,23 @@
         .CV {
             width: 95%;
             margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .competences {
+        &__text {
+            @include font-size-body-medium;
+        }
+        .collapsesAndCV {
+            .CV {
+                padding-bottom: 30px;
+
+                &__image {
+                    margin-bottom: 40px;
+                }
+            }
         }
     }
 }

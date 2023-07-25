@@ -17,7 +17,8 @@
             background-color: $dark-complementary-color;
             @include border-radius;
             @include box-shadow;
-            width: 800px;
+            max-width: 800px;
+            width: 80%;
             height: 250px;
             margin: 0 auto 40px auto;
             display: flex;
@@ -64,6 +65,39 @@
 
             .swiper-pagination-bullet-active {
                 background-color: $dark-complementary-color;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 851px) and (max-width: 1000px) {
+    .citations {
+        &__slide {
+            .quoteBox {
+                &__quote {
+                    font-size: 28px;
+                }
+
+                &__author {
+                    @include font-size-title-medium;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .citations {
+        &__slide {
+            .quoteBox {
+                width: 90%;
+                &__quote {
+                    font-size: 24px;
+                }
+
+                &__author {
+                    @include font-size-title-medium;
+                }
             }
         }
     }
