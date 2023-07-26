@@ -25,15 +25,26 @@ export default function APropos() {
                     <strong className="aPropos__text--highlight">
                         développement web
                     </strong>
-                    . J'ai suivi une formation en ligne chez Openclassrooms, une
-                    plateforme reconnue dans le domaine de l'apprentissage en
-                    ligne.
+                    . J'ai suivi une formation en ligne chez{' '}
+                    <a
+                        href="https://openclassrooms.com/fr/"
+                        className="aPropos__text--link"
+                        target="blank"
+                        title="Visiter le site d'OpenClassrooms">
+                        Openclassrooms
+                    </a>
+                    , une plateforme reconnue dans le domaine de l'apprentissage
+                    en ligne.
                 </p>
                 <p>
                     À travers ce portfolio, je partage{' '}
-                    <strong className="aPropos__text--highlight">
-                        mes réalisations
-                    </strong>{' '}
+                    <a
+                        href="#realisationsAnchor"
+                        className="aPropos__text--anchor">
+                        <strong className="aPropos__text--highlight">
+                            mes réalisations
+                        </strong>
+                    </a>{' '}
                     et mon évolution en tant que développeur web. Je combine mes
                     connaissances du commerce avec mes compétences en
                     développement web pour apporter une perspective unique à mes

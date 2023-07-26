@@ -23,14 +23,20 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer__logo">
-                <a href="#">
+                <a
+                    href="https://www.linkedin.com/in/anthony-tur-438b44165/"
+                    title="Visiter mon profil LinkedIn"
+                    target="blank">
                     <img
                         src={logoLinkedIn}
                         alt="Logo LinkedIn, possibilité de cliquer pour être redirigé vers le profil LinkedIn d'Anthony Tur"
                         className="footer__logo--linkedIn logo"
                     />
                 </a>
-                <a href="#">
+                <a
+                    href="https://github.com/Immortalisanto"
+                    target="blank"
+                    title="Visiter mon profil Github">
                     <img
                         src={logoGithub}
                         alt="Logo Github, possibilité de cliquer pour être redirigé vers le profil github d'Anthony Tur"

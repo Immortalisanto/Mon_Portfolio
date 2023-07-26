@@ -31,6 +31,20 @@
         &--highlight {
             @include font-size-body-medium-highlight;
         }
+
+        &--link {
+            color: $secondary-color;
+        }
+
+        &--anchor {
+            text-decoration: none;
+            color: black;
+        }
+
+        &--anchor:hover {
+            text-decoration: underline;
+            color: $secondary-color;
+        }
     }
 
     &__boxes {
