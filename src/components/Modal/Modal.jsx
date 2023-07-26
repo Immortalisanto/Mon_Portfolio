@@ -21,7 +21,11 @@ export default function Modal({ title, tags, description, image, onClose }) {
                     onClick={onClose}
                 />
                 <h3 className="modalContent__title">{title}</h3>
-                <div className="modalContent__tags">{tags}</div>
+                <div
+                    className="modalContent__tags"
+                    style={{ display: tags ? 'flex' : 'none' }}>
+                    {tags}
+                </div>
                 <div className="modalContent__descriptionBox">
                     <div className="description">{description}</div>
                 </div>

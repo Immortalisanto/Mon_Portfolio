@@ -10,8 +10,14 @@ export default function Footer() {
     const [isModalPrivacyPolicyOpen, setIsModalPrivacyPolicyOpen] =
         useState(false)
 
-    const handleIsModalOpen = () => {
+    const handleIsModalPrivacyPolicyOpen = () => {
         setIsModalPrivacyPolicyOpen(!isModalPrivacyPolicyOpen)
+    }
+
+    const [isModalLegalNoticeOpen, setIsModalLegalNoticeOpen] = useState(false)
+
+    const handleIsModalLegalNoticeOpen = () => {
+        setIsModalLegalNoticeOpen(!isModalLegalNoticeOpen)
     }
 
     return (
@@ -37,13 +43,13 @@ export default function Footer() {
                 <p className="footer__legalInformations--privacyPolicy legalInformation">
                     <span
                         className="underlineItem linksLegalInformations"
-                        onClick={handleIsModalOpen}>
+                        onClick={handleIsModalPrivacyPolicyOpen}>
                         Politique de confidentialité
                     </span>
                 </p>
                 {isModalPrivacyPolicyOpen && (
                     <Modal
-                        onClose={handleIsModalOpen}
+                        onClose={handleIsModalPrivacyPolicyOpen}
                         title="Politique de confidentialité"
                         description={
                             <div className="privacyPolicyModal">
@@ -155,10 +161,97 @@ export default function Footer() {
                     />
                 )}
                 <p className="footer__legalInformations--legalNotice legalInformation">
-                    <span className="underlineItem linksLegalInformations">
+                    <span
+                        className="underlineItem linksLegalInformations"
+                        onClick={handleIsModalLegalNoticeOpen}>
                         Mentions légales
                     </span>
                 </p>
+                {isModalLegalNoticeOpen && (
+                    <Modal
+                        onClose={handleIsModalLegalNoticeOpen}
+                        title="Mentions légales"
+                        description={
+                            <div className="legalNoticeModal">
+                                <h4 className="legalNoticeModal__title">
+                                    Éditeur du site :
+                                </h4>
+                                <p className="legalNoticeModal__text">
+                                    Anthony TUR, domicilié à Route de Lambesc,
+                                    13330 Pélissanne.
+                                    <br />
+                                    Adresse e-mail : turanthony.webdev@gmail.com
+                                </p>
+                                <h4 className="legalNoticeModal__title">
+                                    Responsable de la publication :
+                                </h4>
+                                <p className="legalNoticeModal__text">
+                                    Anthony TUR
+                                </p>
+                                <h4 className="legalNoticeModal__title">
+                                    Hébergeur du site :
+                                </h4>
+                                <p className="legalNoticeModal__text">
+                                    (A remplir)
+                                </p>
+                                <h4 className="legalNoticeModal__title">
+                                    Propriété intellectuelle :
+                                </h4>
+                                <p className="legalNoticeModal__text">
+                                    Le contenu du site, y compris le logo, est
+                                    protégé par le droit d'auteur et est la
+                                    propriété exclusive d'Anthony TUR.
+                                </p>
+                                <h4 className="legalNoticeModal__title">
+                                    Collecte des données personnelles :
+                                </h4>
+                                <p className="legalNoticeModal__text">
+                                    Les informations collectées à travers le
+                                    formulaire de contact (adresse e-mail, nom,
+                                    prénom, numéro de téléphone) sont utilisées
+                                    dans le seul but de pouvoir répondre aux
+                                    demandes des visiteurs. Ces informations ne
+                                    seront en aucun cas partagées avec des tiers
+                                    et seront stockées de manière sécurisée dans
+                                    une base de données chiffrée.
+                                </p>
+                                <h4 className="legalNoticeModal__title">
+                                    Cookies :
+                                </h4>
+                                <p className="legalNoticeModal__text">
+                                    Le site n'utilise pas de cookies.
+                                </p>
+                                <h4 className="legalNoticeModal__title">
+                                    Exonération de responsabilité :
+                                </h4>
+                                <p className="legalNoticeModal__text">
+                                    Ce site est un simple portfolio présentant
+                                    les travaux et compétences d'Anthony TUR en
+                                    tant que développeur web. Bien que je m'
+                                    fforce de fournir des informations exactes
+                                    et à jour, je ne peux garantir l'exactitude
+                                    et l'exhaustivité du contenu du site. En
+                                    conséquence, je décline toute responsabilité
+                                    pour tout dommage résultant de l'utilisation
+                                    du site.
+                                </p>
+                                <h4 className="legalNoticeModal__title">
+                                    Loi applicable et juridiction compétente :
+                                </h4>
+                                <p className="legalNoticeModal__text">
+                                    Le présent site et les présentes mentions
+                                    légales sont soumis au droit français. En
+                                    cas de litige, les tribunaux français seront
+                                    compétents. Ces mentions légales peuvent
+                                    être modifiées à tout moment sans préavis.
+                                    Je vous recommande de les consulter
+                                    régulièrement pour vous tenir informé des
+                                    éventuelles mises à jour.
+                                </p>
+                            </div>
+                        }
+                    />
+                )}
             </div>
         </footer>
     )

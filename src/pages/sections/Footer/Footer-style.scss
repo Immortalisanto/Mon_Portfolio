@@ -78,6 +78,17 @@
     }
 }
 
+.legalNoticeModal {
+    &__title {
+        text-align: left;
+        margin-top: 60px;
+    }
+
+    &__text {
+        text-align: left;
+    }
+}
+
 @media screen and (max-width: 650px) {
     .footer {
         height: 280px;
@@ -115,6 +126,12 @@
         }
 
         &__list {
+            font-size: 18px;
+        }
+    }
+
+    .legalNoticeModal {
+        &__text {
             font-size: 18px;
         }
     }
