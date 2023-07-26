@@ -11,12 +11,14 @@
     transition: background-color 0.5s ease-in-out, height 0.5s ease-in-out;
 
     .avatar {
+        border-radius: 100px;
         width: 160px;
         position: absolute;
         top: 0;
         right: 50%;
         transform: translateX(50%);
         transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+        cursor: pointer;
     }
 
     .nav {
@@ -46,6 +48,10 @@
                     &__link {
                         color: $light-color;
                         text-decoration: none;
+                    }
+
+                    .accueilButton {
+                        cursor: pointer;
                     }
                 }
 

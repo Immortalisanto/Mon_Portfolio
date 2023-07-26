@@ -58,32 +58,39 @@ export default function Header() {
         setShowLinks(!showLinks)
     }
 
+    // Scroll to top
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0 })
+    }
+
+    // Accueil Button
+    const handleClick = () => {
+        if (screenWidth === 'small') {
+            handleShowLinks()
+        }
+        scrollToTop()
+    }
+
     return (
         <header
             className="header"
             id="header">
-            <a href="#root">
-                <img
-                    src={Avatar}
-                    alt="Avatar représentant Anthony Tur, développeur Web"
-                    className="avatar"
-                    id="avatar"
-                />
-            </a>
+            <img
+                src={Avatar}
+                alt="Avatar représentant Anthony Tur, développeur Web"
+                className="avatar"
+                id="avatar"
+                onClick={scrollToTop}
+            />
             <nav className={`nav ${showLinks ? 'showNav' : 'hiddenNav'}`}>
                 <ul className="navList">
                     <li className="navList__listItem item1">
                         <span className="underlineItem">
-                            <a
-                                href="#root"
-                                className="underlineItem__link"
-                                onClick={
-                                    screenWidth === 'small'
-                                        ? handleShowLinks
-                                        : null
-                                }>
+                            <span
+                                className="underlineItem__link accueilButton"
+                                onClick={handleClick}>
                                 Accueil
-                            </a>
+                            </span>
                         </span>
                     </li>
                     <li className="navList__listItem item2">
