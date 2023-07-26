@@ -86,6 +86,7 @@ export default function Realisations() {
                                         tag={tag}
                                     />
                                 ))}
+                                github={work.github}
                                 description={work.description}
                                 image={work.image}
                                 onClose={() => {

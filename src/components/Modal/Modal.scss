@@ -58,6 +58,16 @@
         }
     }
 
+    &__github {
+        margin-top: 20px;
+        width: 80px;
+
+        &__logo {
+            width: 80px;
+            @include drop-shadow;
+        }
+    }
+
     &__descriptionBox {
         background-color: $secondary-color;
         @include border-radius;

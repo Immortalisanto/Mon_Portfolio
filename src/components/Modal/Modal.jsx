@@ -1,9 +1,17 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import cross from '../../assets/images/cross.png'
+import githubLogo from '../../assets/images/github.png'
 import './Modal.scss'
 
-export default function Modal({ title, tags, description, image, onClose }) {
+export default function Modal({
+    title,
+    tags,
+    description,
+    image,
+    onClose,
+    github,
+}) {
     useEffect(() => {
         document.body.style.overflow = 'hidden'
         return () => {
@@ -26,6 +34,17 @@ export default function Modal({ title, tags, description, image, onClose }) {
                     style={{ display: tags ? 'flex' : 'none' }}>
                     {tags}
                 </div>
+                <a
+                    className="modalContent__github"
+                    href={github}
+                    target="blank"
+                    title={`Visiter le projet ${title}`}>
+                    <img
+                        className="modalContent__github__logo"
+                        src={githubLogo}
+                        alt="Lien dirigeant vers le projet github"
+                    />
+                </a>
                 <div className="modalContent__descriptionBox">
                     <div className="description">{description}</div>
                 </div>

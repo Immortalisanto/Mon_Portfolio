@@ -13,6 +13,7 @@ export const RealisationsData = [
         description:
             "Création de la page d'accueil d'une agence de voyage. Code créé de zéro. Intégration du contenu à partir d'une maquette Figma. Site web entièrement responsive, s'adapte sur mobile et tablette. Projet réalisé durant le parcours de formation 'Développeur Web' chez Openclassrooms.",
         tags: ['HTML', 'CSS', 'Figma'],
+        github: 'https://github.com/Immortalisanto/GH-Booky.git',
     },
     {
         index: 1,
@@ -21,6 +22,7 @@ export const RealisationsData = [
         description:
             "Transformation d'un site web 'statique' vers un type 'dynamique'. Conception du portfolio d'une architecte d'intérieur, possibilité de connexion de l'administrateur pour modifier le contenu de la galerie (Ajout et Suppression) en communiquant avec une API. Projet réalisé durant le parcours de formation 'Développeur Web' chez Openclassrooms.",
         tags: ['Javascript', 'Figma'],
+        github: 'https://github.com/Immortalisanto/Projet-JS.git',
     },
     {
         index: 2,
@@ -29,6 +31,7 @@ export const RealisationsData = [
         description:
             "Débogage et optimisation d'un site d'une photographe. Optimisation globale du site (performances et bonnes pratique SEO), mise en place d'un référencement local, des métas pour les réseaux sociaux ainsi que des modifications pour améliorer l'accessibilité du site. Projet réalisé durant le parcours de formation 'Développeur Web' chez Openclassrooms.",
         tags: ['Lighthouse', 'Wave', 'Rich Snippet', 'Photoshop', 'W3C'],
+        github: 'https://github.com/Immortalisanto/nina_carducci.git',
     },
     {
         index: 3,
@@ -37,6 +40,7 @@ export const RealisationsData = [
         description:
             "Création d'une application web de location immobilière. Utilisation de la bibliothèque React. Code créé de zéro. Ajout d'animations CSS. Intégration du contenu à partir d'une maquette Figma. Site web entièrement responsive, s'adapte sur mobile et tablette. Projet réalisé durant le parcours de formation 'Développeur Web' chez Openclassrooms.",
         tags: ['HTML', 'CSS', 'React', 'Figma'],
+        github: 'https://github.com/Immortalisanto/kasa_project.git',
     },
     {
         index: 4,
@@ -45,6 +49,7 @@ export const RealisationsData = [
         description:
             "Développement du back-end d'un site de notation de livres. Mise en oeuvre des opérations CRUD. Utilisation d'une base de données MongoDB. Mise en place d'une API sécurisée avec Express. Projet réalisé durant le parcours de formation 'Développeur Web' chez Openclassrooms.",
         tags: ['Node.js', 'Express', 'MongoDB'],
+        github: 'https://github.com/Immortalisanto/mon_vieux_grimoire.git',
     },
     {
         index: 5,
@@ -61,5 +66,6 @@ export const RealisationsData = [
             'Express',
             'MongoDB',
         ],
+        github: 'https://github.com/Immortalisanto/Mon_Portfolio.git',
     },
 ]
