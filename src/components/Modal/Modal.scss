@@ -93,11 +93,17 @@
         }
     }
 
+    &__imagesBox {
+        max-width: 1400px;
+        width: 90%;
+    }
+
     &__image {
         border: 2px $secondary-color solid;
         @include border-radius;
         @include box-shadow;
-        width: 450px;
+        max-width: 1400px;
+        width: calc(100% - 4px);
         margin-bottom: 20px;
     }
 }

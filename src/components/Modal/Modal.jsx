@@ -8,9 +8,9 @@ export default function Modal({
     title,
     tags,
     description,
-    image,
     onClose,
     github,
+    images,
 }) {
     useEffect(() => {
         document.body.style.overflow = 'hidden'
@@ -36,6 +36,7 @@ export default function Modal({
                 </div>
                 <a
                     className="modalContent__github"
+                    style={{ display: github ? 'inline' : 'none' }}
                     href={github}
                     target="blank"
                     title={`Visiter le projet ${title}`}>
@@ -48,12 +49,7 @@ export default function Modal({
                 <div className="modalContent__descriptionBox">
                     <div className="description">{description}</div>
                 </div>
-                <img
-                    className="modalContent__image"
-                    src={image}
-                    style={{ display: image ? 'block' : 'none' }}
-                    alt={title}
-                />
+                <div className="modalContent__imagesBox">{images}</div>
             </div>
         </div>,
         document.getElementById('modal-root')

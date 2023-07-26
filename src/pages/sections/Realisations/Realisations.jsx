@@ -29,9 +29,11 @@ export default function Realisations() {
     const windowWidth = useWindowSize().width
 
     useEffect(() => {
-        if (windowWidth <= 1140) {
+        if (windowWidth <= 850) {
+            setScreenWidth('verySmall')
+        } else if (windowWidth > 850 && windowWidth <= 1140) {
             setScreenWidth('small')
-        } else {
+        } else if (windowWidth > 1140) {
             setScreenWidth('large')
         }
     }, [windowWidth])
@@ -49,7 +51,7 @@ export default function Realisations() {
                 navigation
                 autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
                 pagination={{ clickable: true }}
-                slidesPerView={screenWidth === 'small' ? 1 : 2}>
+                slidesPerView={screenWidth === 'large' ? 2 : 1}>
                 {RealisationsData.map((work, index) => (
                     <SwiperSlide
                         className="work"
@@ -57,7 +59,7 @@ export default function Realisations() {
                             .slice(0, 10)
                             .replaceAll(' ', '&')}`}>
                         <img
-                            src={work.image}
+                            src={work.cover}
                             alt={work.title}
                             className={
                                 updatedHoverStates[index] === true
@@ -88,7 +90,29 @@ export default function Realisations() {
                                 ))}
                                 github={work.github}
                                 description={work.description}
-                                image={work.image}
+                                images={
+                                    screenWidth === 'verySmall'
+                                        ? work.imagesMobile.map(
+                                              (image, index) => (
+                                                  <img
+                                                      key={`${index}-${work.title}`}
+                                                      className="modalContent__image"
+                                                      src={image}
+                                                      alt={work.title}
+                                                  />
+                                              )
+                                          )
+                                        : work.imagesDesktop.map(
+                                              (image, index) => (
+                                                  <img
+                                                      key={`${index}-${work.title}`}
+                                                      className="modalContent__image"
+                                                      src={image}
+                                                      alt={work.title}
+                                                  />
+                                              )
+                                          )
+                                }
                                 onClose={() => {
                                     updatedIsModalOpen[index] = false
                                     setIsModalOpen(updatedIsModalOpen)
