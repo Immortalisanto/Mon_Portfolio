@@ -23,11 +23,12 @@ export default function Modal({ title, tags, description, image, onClose }) {
                 <h3 className="modalContent__title">{title}</h3>
                 <div className="modalContent__tags">{tags}</div>
                 <div className="modalContent__descriptionBox">
-                    <p className="description">{description}</p>
+                    <div className="description">{description}</div>
                 </div>
                 <img
                     className="modalContent__image"
                     src={image}
+                    style={{ display: image ? 'block' : 'none' }}
                     alt={title}
                 />
             </div>

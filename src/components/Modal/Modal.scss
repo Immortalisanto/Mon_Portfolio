@@ -19,6 +19,8 @@
 .modalContent {
     background-color: $primary-color;
     width: 80%;
+    max-height: 95%;
+    overflow: auto;
     @include border-radius;
     @include box-shadow;
     position: relative;
@@ -97,6 +99,10 @@
 @media screen and (max-width: 650px) {
     .modalContent {
         width: 95%;
+
+        &__title {
+            font-size: 30px;
+        }
 
         &__tags {
             width: 80%;
