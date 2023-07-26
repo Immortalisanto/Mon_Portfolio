@@ -8,6 +8,7 @@ import Citations from './sections/Citations/Citations'
 import Realisations from './sections/Realisations/Realisations'
 import Competences from './sections/Competences/Competences'
 import Contact from './sections/Contact/Contact'
+import BackToTopButton from '../components/BackToTopButton/BackToTopButton'
 
 export default function Home() {
     return (
@@ -21,6 +22,7 @@ export default function Home() {
                 <Citations />
                 <Services />
                 <Contact />
+                <BackToTopButton />
             </main>
             <Footer />
         </React.Fragment>

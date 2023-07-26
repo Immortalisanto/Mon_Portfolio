@@ -1,0 +1,42 @@
+@import '../../assets/variables-SCSS/shadow.scss';
+@import '../../assets/variables-SCSS/colors.scss';
+
+.backToTopButton {
+    border: 2px $light-color solid;
+    border-radius: 25px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: $secondary-color;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+
+    &__arrowDiv {
+        border-radius: 25px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__arrow {
+            height: 30px;
+            transform: rotate(-90deg);
+            @include drop-shadow;
+        }
+    }
+}
+
+.backToTopButton.hidden {
+    opacity: 0;
+    cursor: auto;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 850px) {
+    .backToTopButton {
+        display: none;
+    }
+}
