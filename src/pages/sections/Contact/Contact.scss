@@ -8,7 +8,6 @@
     background-color: $light-complementary-color;
     min-height: 900px;
     border-bottom: 2px $secondary-color solid;
-    scroll-margin-top: 80px;
 
     &__title {
         font-family: $font-family-title;
@@ -133,6 +132,12 @@
                 margin-top: 30px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .contact {
+        scroll-margin-top: 80px;
     }
 }
 

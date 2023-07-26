@@ -8,7 +8,6 @@
     min-height: 1180px;
     background-color: $tertiary-color;
     padding: 0 10px;
-    scroll-margin-top: 60px;
 
     &__title {
         @include font-size-title-medium;
@@ -81,6 +80,12 @@
             width: 95%;
             margin-bottom: 30px;
         }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .competences {
+        scroll-margin-top: 80px;
     }
 }
 
