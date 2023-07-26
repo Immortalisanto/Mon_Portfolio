@@ -14,8 +14,14 @@
     cursor: pointer;
     font-family: $font-family-body;
     font-size: 20px;
+    transition: transform 0.5s ease-in-out;
 
     &__text {
         @include drop-shadow;
     }
+}
+
+.button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
 }

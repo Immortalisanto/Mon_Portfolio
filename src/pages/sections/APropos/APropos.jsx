@@ -31,7 +31,9 @@ export default function APropos() {
                         className="aPropos__text--link"
                         target="blank"
                         title="Visiter le site d'OpenClassrooms">
-                        Openclassrooms
+                        <strong className="aPropos__text--highlight">
+                            Openclassrooms
+                        </strong>
                     </a>
                     , une plateforme reconnue dans le domaine de l'apprentissage
                     en ligne.
@@ -40,7 +42,7 @@ export default function APropos() {
                     À travers ce portfolio, je partage{' '}
                     <a
                         href="#realisationsAnchor"
-                        className="aPropos__text--anchor">
+                        className="aPropos__text--link">
                         <strong className="aPropos__text--highlight">
                             mes réalisations
                         </strong>

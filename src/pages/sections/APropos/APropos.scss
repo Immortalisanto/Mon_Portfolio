@@ -33,15 +33,11 @@
         }
 
         &--link {
-            color: $secondary-color;
-        }
-
-        &--anchor {
             text-decoration: none;
             color: black;
         }
 
-        &--anchor:hover {
+        &--link:hover {
             text-decoration: underline;
             color: $secondary-color;
         }
