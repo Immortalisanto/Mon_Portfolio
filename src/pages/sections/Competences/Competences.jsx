@@ -3,9 +3,12 @@ import Button from '../../../components/Button/Button'
 import CV from '../../../assets/images/CV.png'
 import Collapse from '../../../components/Collapse/Collapse'
 import { CompetencesData } from '../../../data/CompetencesData'
-import CVPDF from '../../../assets/CV.pdf'
 
 export default function Competences() {
+    const downloadCV = () => {
+        window.location.href = 'http://localhost:4000/api/download/cv'
+    }
+
     return (
         <section
             className="competences"
@@ -34,11 +37,9 @@ export default function Competences() {
                         src={CV}
                         alt="Curriculum Vitae d'Anthony Tur"
                     />
-                    <a
-                        href={CVPDF}
-                        download>
+                    <span onClick={downloadCV}>
                         <Button text="Télécharger" />
-                    </a>
+                    </span>
                 </div>
             </div>
         </section>
