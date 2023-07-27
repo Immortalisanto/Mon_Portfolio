@@ -6,7 +6,6 @@
 
 .contact {
     background-color: $light-complementary-color;
-    min-height: 900px;
     border-bottom: 2px $secondary-color solid;
 
     &__title {
@@ -34,6 +33,12 @@
         @include box-shadow;
         padding-top: 40px;
         padding-bottom: 40px;
+
+        &__messageSent {
+            font-family: $font-family-body;
+            @include font-size-body-medium-highlight;
+            text-align: center;
+        }
 
         &__box {
             margin: 0 10%;

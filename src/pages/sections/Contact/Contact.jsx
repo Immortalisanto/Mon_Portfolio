@@ -1,7 +1,48 @@
 import './Contact.scss'
 import Button from '../../../components/Button/Button'
+import { useState } from 'react'
+import axios from 'axios'
 
 export default function Contact() {
+    const [nameData, setNameData] = useState('')
+    const [firstNameData, setFirstNameData] = useState('')
+    const [emailData, setEmailData] = useState('')
+    const [numberData, setNumberData] = useState('')
+    const [subjectData, setSubjectData] = useState('')
+    const [messageData, setMessageData] = useState('')
+    const [isChecked, setIsChecked] = useState(false)
+    const [isMessageSent, setIsMessageSent] = useState(false)
+
+    const sendEmail = async (e) => {
+        e.preventDefault()
+
+        const data = {
+            nameData,
+            firstNameData,
+            emailData,
+            numberData,
+            subjectData,
+            messageData,
+        }
+
+        try {
+            // eslint-disable-next-line no-unused-vars
+            const response = await axios.post(
+                'http://localhost:4000/api/form/sendEmail',
+                data
+            )
+            setNameData('')
+            setFirstNameData('')
+            setEmailData('')
+            setNumberData('')
+            setSubjectData('')
+            setMessageData('')
+            setIsMessageSent(true)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <section
             className="contact"
@@ -17,60 +58,92 @@ export default function Contact() {
                 Je serai attentif à votre demande et nous pourrons explorer
                 ensemble les possibilités qui s'offrent à nous.
             </p>
-            <form className="contact__form">
-                <div className="contact__form__box">
-                    <div className="displayFlexFourBubbles">
-                        <div className="displayFlexFourBubbles__displayFlexTwoBubbles">
-                            <input
-                                className="form__bubbleForm"
-                                type="text"
-                                placeholder="Nom *"
-                                required></input>
-                            <input
-                                className="form__bubbleForm"
-                                type="text"
-                                placeholder="Prénom"></input>
-                        </div>
-                        <div className="displayFlexFourBubbles__displayFlexTwoBubbles">
-                            <input
-                                className="form__bubbleForm"
-                                type="email"
-                                placeholder="Adresse email *"
-                                required></input>
-                            <input
-                                className="form__bubbleForm"
-                                type="tel"
-                                placeholder="Téléphone"></input>
-                        </div>
+            <form
+                className="contact__form"
+                onSubmit={sendEmail}>
+                {isMessageSent ? (
+                    <div className="contact__form__messageSent">
+                        <p>Merci !</p>
+                        <p>Votre message a bien été envoyé.</p>
+                        <p>Je vous recontacterais dans les meilleurs délais.</p>
                     </div>
-                    <input
-                        className="form__bubbleForm form__bubbleForm--largeWidth"
-                        type="text"
-                        placeholder="Sujet *"
-                        required></input>
-                    <textarea
-                        className="form__bubbleForm form__bubbleForm--largeBox"
-                        type="text"
-                        placeholder="Votre message *"
-                        required></textarea>
-                    <div className="form__checkPersonalData">
+                ) : (
+                    <div className="contact__form__box">
+                        <div className="displayFlexFourBubbles">
+                            <div className="displayFlexFourBubbles__displayFlexTwoBubbles">
+                                <input
+                                    className="form__bubbleForm"
+                                    type="text"
+                                    placeholder="Nom *"
+                                    value={nameData}
+                                    onChange={(e) =>
+                                        setNameData(e.target.value)
+                                    }
+                                    required></input>
+                                <input
+                                    className="form__bubbleForm"
+                                    type="text"
+                                    placeholder="Prénom"
+                                    value={firstNameData}
+                                    onChange={(e) =>
+                                        setFirstNameData(e.target.value)
+                                    }></input>
+                            </div>
+                            <div className="displayFlexFourBubbles__displayFlexTwoBubbles">
+                                <input
+                                    className="form__bubbleForm"
+                                    type="email"
+                                    placeholder="Adresse email *"
+                                    value={emailData}
+                                    onChange={(e) =>
+                                        setEmailData(e.target.value)
+                                    }
+                                    required></input>
+                                <input
+                                    className="form__bubbleForm"
+                                    type="tel"
+                                    placeholder="Téléphone"
+                                    value={numberData}
+                                    onChange={(e) =>
+                                        setNumberData(e.target.value)
+                                    }></input>
+                            </div>
+                        </div>
                         <input
-                            className="form__checkPersonalData__checkbox"
-                            type="checkbox"
+                            className="form__bubbleForm form__bubbleForm--largeWidth"
+                            type="text"
+                            placeholder="Sujet *"
+                            value={subjectData}
+                            onChange={(e) => setSubjectData(e.target.value)}
                             required></input>
-                        <p className="form__checkPersonalData__text">
-                            En soumettant ce formulaire, j'accepte que mes
-                            données personnelles soient utilisées pour me
-                            recontacter. Aucun autre traitement ne sera effectué
-                            avec mes informations. Pour connaître et exercer vos
-                            droits, veuillez consultez la Politique de
-                            confidentialité.
-                        </p>
+                        <textarea
+                            className="form__bubbleForm form__bubbleForm--largeBox"
+                            type="text"
+                            placeholder="Votre message *"
+                            value={messageData}
+                            onChange={(e) => setMessageData(e.target.value)}
+                            required></textarea>
+                        <div className="form__checkPersonalData">
+                            <input
+                                className="form__checkPersonalData__checkbox"
+                                type="checkbox"
+                                value={isChecked}
+                                onChange={(e) => setIsChecked(e.target.checked)}
+                                required></input>
+                            <p className="form__checkPersonalData__text">
+                                En soumettant ce formulaire, j'accepte que mes
+                                données personnelles soient utilisées pour me
+                                recontacter. Aucun autre traitement ne sera
+                                effectué avec mes informations. Pour connaître
+                                et exercer vos droits, veuillez consultez la
+                                Politique de confidentialité.
+                            </p>
+                        </div>
+                        <div className="form__submit">
+                            <Button text="Envoyer" />
+                        </div>
                     </div>
-                    <div className="form__submit">
-                        <Button text="Envoyer" />
-                    </div>
-                </div>
+                )}
             </form>
         </section>
     )
