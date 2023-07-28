@@ -111,3 +111,32 @@
         scroll-margin-top: 80px;
     }
 }
+
+@media screen and (max-width: 350px) {
+    .aPropos {
+        &__text {
+            font-size: 18px;
+
+            &--highlight {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .informationBox {
+        width: 90% !important;
+
+        &__title {
+            width: 90% !important;
+            font-size: 28px !important;
+        }
+
+        &__description {
+            width: 90% !important;
+
+            &__paragraph {
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -42,8 +42,14 @@
                 @include border-radius;
                 @include box-shadow;
                 margin-bottom: 60px;
-                max-width: 95%;
-                min-width: 400px;
+                width: 95%;
+            }
+
+            .competencesButtonLink {
+                display: flex;
+                justify-content: center;
+                width: 80%;
+                text-decoration: none;
             }
         }
     }

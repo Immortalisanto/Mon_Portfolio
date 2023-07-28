@@ -37,7 +37,9 @@ export default function Competences() {
                         src={CV}
                         alt="Curriculum Vitae d'Anthony Tur"
                     />
-                    <span onClick={downloadCV}>
+                    <span
+                        onClick={downloadCV}
+                        className="competencesButtonLink">
                         <Button text="Télécharger" />
                     </span>
                 </div>
