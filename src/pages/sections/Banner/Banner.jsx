@@ -42,7 +42,9 @@ export default function Banner() {
                     </h1>
                 </div>
 
-                <a href="#contactAnchor">
+                <a
+                    href="#contactAnchor"
+                    className="bannerButtonLink">
                     <Button text="Me contacter" />
                 </a>
             </div>
