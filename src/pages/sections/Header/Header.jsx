@@ -168,6 +168,7 @@ export default function Header() {
                 <button
                     className="nav__burger"
                     id="burger"
+                    aria-label="bouton menu hamburger"
                     onClick={handleShowLinks}>
                     <span className="burgerBar"></span>
                 </button>

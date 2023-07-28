@@ -76,6 +76,7 @@ export default function Contact() {
                                     type="text"
                                     placeholder="Nom *"
                                     value={nameData}
+                                    aria-label="Saisir votre nom (obligatoire)"
                                     onChange={(e) =>
                                         setNameData(e.target.value)
                                     }
@@ -85,6 +86,7 @@ export default function Contact() {
                                     type="text"
                                     placeholder="Prénom"
                                     value={firstNameData}
+                                    aria-label="Saisir votre prénom"
                                     onChange={(e) =>
                                         setFirstNameData(e.target.value)
                                     }></input>
@@ -95,6 +97,7 @@ export default function Contact() {
                                     type="email"
                                     placeholder="Adresse email *"
                                     value={emailData}
+                                    aria-label="Saisir votre adresse email (obligatoire)"
                                     onChange={(e) =>
                                         setEmailData(e.target.value)
                                     }
@@ -104,6 +107,7 @@ export default function Contact() {
                                     type="tel"
                                     placeholder="Téléphone"
                                     value={numberData}
+                                    aria-label="Saisir votre numéro de téléphone"
                                     onChange={(e) =>
                                         setNumberData(e.target.value)
                                     }></input>
@@ -114,6 +118,7 @@ export default function Contact() {
                             type="text"
                             placeholder="Sujet *"
                             value={subjectData}
+                            aria-label="Saisir le sujet de votre message (obligatoire)"
                             onChange={(e) => setSubjectData(e.target.value)}
                             required></input>
                         <textarea
@@ -121,6 +126,7 @@ export default function Contact() {
                             type="text"
                             placeholder="Votre message *"
                             value={messageData}
+                            aria-label="Saisir votre message (obligatoire)"
                             onChange={(e) => setMessageData(e.target.value)}
                             required></textarea>
                         <div className="form__checkPersonalData">
@@ -128,6 +134,7 @@ export default function Contact() {
                                 className="form__checkPersonalData__checkbox"
                                 type="checkbox"
                                 value={isChecked}
+                                aria-label="Accepter que vos données personnelles soient utilisées pour vous recontacter (obligatoire)"
                                 onChange={(e) => setIsChecked(e.target.checked)}
                                 required></input>
                             <p className="form__checkPersonalData__text">
