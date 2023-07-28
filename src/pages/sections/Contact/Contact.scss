@@ -172,3 +172,19 @@
         }
     }
 }
+
+@media screen and (max-width: 350px) {
+    .contact {
+        &__text {
+            font-size: 18px;
+        }
+
+        .form {
+            &__checkPersonalData {
+                &__text {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
