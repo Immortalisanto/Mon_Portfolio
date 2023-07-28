@@ -130,5 +130,11 @@
         &__tags {
             width: 80%;
         }
+
+        &__descriptionBox {
+            .description {
+                font-size: 16px;
+            }
+        }
     }
 }

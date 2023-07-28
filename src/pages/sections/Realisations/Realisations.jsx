@@ -29,7 +29,9 @@ export default function Realisations() {
     const windowWidth = useWindowSize().width
 
     useEffect(() => {
-        if (windowWidth <= 850) {
+        if (windowWidth <= 520) {
+            setScreenWidth('veryVerySmall')
+        } else if (windowWidth > 520 && windowWidth <= 850) {
             setScreenWidth('verySmall')
         } else if (windowWidth > 850 && windowWidth <= 1140) {
             setScreenWidth('small')
@@ -119,7 +121,6 @@ export default function Realisations() {
                                 }}
                             />
                         )}
-
                         {hoverStates[index] && (
                             <div className="infoSlideBox">
                                 <h3 className="infoSlideBox__title">
