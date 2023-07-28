@@ -1,4 +1,4 @@
-import Avatar from '../../../assets/images/avatar.png'
+import Avatar from '../../../assets/images/avatar.webp'
 import './Header-style.scss'
 import { useEffect, useState } from 'react'
 import useWindowSize from '../../../assets/hooks/useWindowSize'

@@ -1,6 +1,6 @@
 import './Competences.scss'
 import Button from '../../../components/Button/Button'
-import CV from '../../../assets/images/CV.png'
+import CV from '../../../assets/images/CV.webp'
 import Collapse from '../../../components/Collapse/Collapse'
 import { CompetencesData } from '../../../data/CompetencesData'
 

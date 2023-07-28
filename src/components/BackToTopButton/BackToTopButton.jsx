@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './BackToTopButton.scss'
-import arrow from '../../assets/images/arrow.png'
+import arrow from '../../assets/images/arrow.webp'
 
 export default function BackToTopButton() {
     const [showButton, setShowButton] = useState(false)

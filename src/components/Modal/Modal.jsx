@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import cross from '../../assets/images/cross.png'
-import githubLogo from '../../assets/images/github.png'
+import cross from '../../assets/images/cross.webp'
+import githubLogo from '../../assets/images/github.webp'
 import './Modal.scss'
 
 export default function Modal({

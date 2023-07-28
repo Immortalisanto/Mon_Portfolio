@@ -1,6 +1,6 @@
 import './Banner.scss'
-import bannerDesktopParallaxXL from '../../../assets/images/banner-desktop-xl.jpg'
-import bannerDesktopParallaxL from '../../../assets/images/banner-desktop-l.jpg'
+import bannerDesktopParallaxXL from '../../../assets/images/banner-desktop-xl.webp'
+import bannerDesktopParallaxL from '../../../assets/images/banner-desktop-l.webp'
 import Button from '../../../components/Button/Button.jsx'
 import { ParallaxBanner } from 'react-scroll-parallax'
 import useWindowSize from '../../../assets/hooks/useWindowSize'

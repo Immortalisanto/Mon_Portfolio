@@ -1,5 +1,5 @@
 import './Collapse.scss'
-import arrow from '../../assets/images/arrow.png'
+import arrow from '../../assets/images/arrow.webp'
 import { useState } from 'react'
 
 export default function Collapse({ categorie, skills, initialOpen }) {

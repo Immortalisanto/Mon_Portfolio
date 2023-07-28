@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import logoLinkedIn from '../../../assets/images/linkedIn.png'
-import logoGithub from '../../../assets/images/github.png'
+import logoLinkedIn from '../../../assets/images/linkedIn.webp'
+import logoGithub from '../../../assets/images/github.webp'
 import './Footer-style.scss'
 import Modal from '../../../components/Modal/Modal'
 import { useState } from 'react'
