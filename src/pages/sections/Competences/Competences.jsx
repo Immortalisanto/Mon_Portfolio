@@ -6,7 +6,7 @@ import { CompetencesData } from '../../../data/CompetencesData'
 
 export default function Competences() {
     const downloadCV = () => {
-        window.location.href = 'http://api.tur-anthony.fr/api/download/cv'
+        window.location.href = 'https://api.tur-anthony.fr/api/download/cv'
     }
 
     return (
